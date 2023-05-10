@@ -2,7 +2,7 @@
     <img src="app/src/main/res/drawable/logo.png" width="200" height="190">
 </p>
 
-<h2 align="center"> "Shoptimise" is an eCommerce app </h2>
+<h2 align="center"> "Shoptimise" is an online shopping application </h2> 
 
 [Mockup in Figma (with Prototype) 🔗](https://www.figma.com/file/pFNcj0Ny3H5mCRsZIZtRv3/Shoptimise?type=design&node-id=0%3A1&t=5YUintZE3MNPmJTy-1) <br>
 
@@ -15,7 +15,7 @@ Various plugins were used in the design. (e.g Material Design Icons,User Profile
 - Login Options 
   - Google Login
   - Email/Password Login
-- Profile, Edit Profile, Change Password.
+- Profile, Edit Profile,User Verification,Change Password.
 - Chats - Chat between buyer/seller
 - Ads List with Search and Filter
 - Add the Ad to Favorite
