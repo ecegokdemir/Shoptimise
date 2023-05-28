@@ -7,11 +7,13 @@
     tools:context=".MainActivity">
     
     <RelativeLayout
+        android:id="@+id/toolbarRL"
         android:layout_width="match_parent"
         android:layout_height="@dimen/m_toolbar_height">
 
         <!--TextView: Toolbar Title-->
         <TextView
+            android:id="@+id/toolbarTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Home"
@@ -34,6 +36,7 @@
         android:id="@+id/FragmentsFL"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRL"
         android:layout_above="@+id/view1"/>
 
     <!--View: To make BottomNavigationView look separate from other UI-->
