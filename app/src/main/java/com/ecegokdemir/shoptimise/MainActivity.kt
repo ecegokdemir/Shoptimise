@@ -1,13 +1,20 @@
 package com.ecegokdemir.shoptimise
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import com.ecegokdemir.shoptimise.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
+    //View Binding
     private lateinit var binding: ActivityMainBinding
+
+    //Firebase auth for auth related tasks
+    private lateinit var firebaseAuth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +22,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //get instance of firebase auth for Auth related tasks
+        firebaseAuth = FirebaseAuth.getInstance()
+        //check if user is logged in or not
+        if(firebaseAuth.currentUser == null){
+            startLoginOptions()
+        }
+
+        //By default show HomeFragment
         showHomeFragment()
 
         binding.bottomNavigation.setOnItemSelectedListener {
@@ -89,6 +104,10 @@ class MainActivity : AppCompatActivity() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(binding.FragmentsFL.id,fragment,"AccountFragment")
         fragmentTransaction.commit()
+    }
+
+    private fun startLoginOptions(){
+        startActivity(Intent(this,LoginOptionsActivity::class.java))
     }
 
 }

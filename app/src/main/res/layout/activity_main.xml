@@ -14,11 +14,11 @@
         <!--TextView: Toolbar Title-->
         <TextView
             android:id="@+id/toolbarTitleTv"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home"
             android:layout_centerInParent="true"
-            style="@style/TextAppearance.MaterialComponents.Body1"/>
+            android:text="Home" />
 
         <!--View: To make Toolbar look separate from other UI-->
         <View

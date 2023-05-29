@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "854431984287",
+    "project_id": "shoptimise-kotlin",
+    "storage_bucket": "shoptimise-kotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854431984287:android:6890a9115434287c6f50aa",
+        "android_client_info": {
+          "package_name": "com.ecegokdemir.shoptimise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvNcJ3_E_DHKelCtIWoAUvLduMg90dugU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
