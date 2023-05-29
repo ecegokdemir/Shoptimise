@@ -1,5 +1,5 @@
 <p align="center"> 
-    <img src="app/src/main/res/drawable/logo.png" width="200" height="190">
+    <img src="app/src/main/res/drawable/icon.png" width="200" height="190">
 </p>
 
 <h2 align="center"> "Shoptimise" is an online shopping application </h2> 
