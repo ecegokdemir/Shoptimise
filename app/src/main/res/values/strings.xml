@@ -3,4 +3,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="not_have_account_register">Not have Account? <b>Register</b></string>
+    <string name="already_have_account_login">Already have account? <b>Login</b></string>
 </resources>
