@@ -43,21 +43,48 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.menu_chats -> {
                     // Chats item clicked, show ChatsFragment
-                    showChatsFragment()
+                    if(firebaseAuth.currentUser == null){
+                        Utils.toast(this,"Login Required")
+                        startLoginOptions()
 
-                    true
+                        false
+                    }
+                    else{
+                        showChatsFragment()
+
+                        true
+                    }
+
                 }
                 R.id.menu_my_ads -> {
                     // My Ads item clicked, show MyAdsFragment
-                    showMyAdsFragment()
+                    if(firebaseAuth.currentUser == null){
+                        Utils.toast(this,"Login Required")
+                        startLoginOptions()
 
-                    true
+                        false
+                    }
+                    else{
+                        showMyAdsFragment()
+
+                        true
+                    }
+
                 }
                 R.id.menu_account -> {
                     // Account item clicked, show AccountFragment
-                    showAccountFragment()
+                    if(firebaseAuth.currentUser == null){
+                        Utils.toast(this,"Login Required")
+                        startLoginOptions()
 
-                    true
+                        false
+                    }
+                    else{
+                        showAccountFragment()
+
+                        true
+                    }
+
                 }
                 else -> {
                     false
