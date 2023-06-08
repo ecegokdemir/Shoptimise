@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="not_have_account_register">Not have Account? <b>Register</b></string>
     <string name="already_have_account_login">Already have account? <b>Login</b></string>
+    <string name="default_web_client_id">854431984287-h2k95cdiqbeonmeu7u2ekn7tjj9q9ea9.apps.googleusercontent.com</string>
+
 </resources>

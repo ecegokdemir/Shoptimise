@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginOptionsActivity">
+    tools:context=".LoginOptionsActivity"
+    android:background="@drawable/background">
 
     <!--ImageButton: Close this activity-->
     <ImageButton
@@ -14,7 +15,7 @@
         android:src="@drawable/icon_close_gray"
         android:background="@android:color/transparent"
         android:padding="10dp"/>
-    
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
             <!--ImageView: Show App Logo-->
             <ImageView
                 android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_height="280dp"
                 android:src="@drawable/logo"
                 android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"/>
@@ -40,10 +41,11 @@
                 android:id="@+id/loginGoogleBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:minHeight="@dimen/m_button_height"
                 android:text="Continue with Google"
-                app:cornerRadius="8dp"/>
+                app:cornerRadius="8dp"
+                app:icon="@drawable/icon_google"/>
 
             <!--MaterialButton: Open Register User Email/Password activity-->
             <com.google.android.material.button.MaterialButton
