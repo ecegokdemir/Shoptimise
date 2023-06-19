@@ -67,7 +67,7 @@ class AccountFragment : Fragment() {
     }
 
     private fun loadMyInfo(){
-
+        //reference of current user info in Firebase Realtime Dtabase to get user info
         val ref = FirebaseDatabase.getInstance().getReference("Users")
         ref.child("${firebaseAuth.uid}")
             .addValueEventListener(object: ValueEventListener{
@@ -76,14 +76,11 @@ class AccountFragment : Fragment() {
                     val dob = "${snapshot.child("dob").value}"
                     val email = "${snapshot.child("email").value}"
                     val name = "${snapshot.child("name").value}"
-                    val phoneCode = "${snapshot.child("phoneCode").value}"
-                    val phoneNumber = "${snapshot.child("phoneNumber").value}"
+                    val phone = "${snapshot.child("phoneNumber").value}"
                     val profileImageUrl = "${snapshot.child("profileImageUrl").value}"
                     var timestamp = "${snapshot.child("timestamp").value}"
                     val userType = "${snapshot.child("userType").value}"
 
-                    //concatenate phone code and phone number to make full phone number
-                    val phone = phoneCode+phoneNumber
 
                     //to avoid null or format exceptions
                     if(timestamp == "null"){
