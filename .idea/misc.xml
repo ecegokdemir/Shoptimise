@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectResources">
+    <resource url="C:\Users\Ece\AndroidStudioProjects\Shoptimise\app\build\generated\crashlytics\res\debug\values\com_google_firebase_crashlytics_mappingfileid.xml" location="$PROJECT_DIR$/app/build/generated/crashlytics/res/debug/values/com_google_firebase_crashlytics_mappingfileid.xml" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

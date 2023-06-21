@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdCreateActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/m_toolbar_height">
+
+        <!--ImageButton: Click to go-back-->
+        <ImageButton
+            android:id="@+id/toolbarBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"/>
+
+        <!--TextView: toolbar Title-->
+        <TextView
+            android:id="@id/toolbarTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Ad"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_centerInParent="true"/>
+
+        <!--ImageButton: Click to show options to pick image from Gallery/Camera-->
+        <ImageButton
+            android:id="@+id/toolbarAdImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_add_photo_gray"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"/>
+
+        <!--View: To make Toolbar look seperate from other UI-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorGray02"/>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarRL"
+        android:layout_above="@+id/postAdBtn"
+        android:padding="10dp">
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <!--TextView: Just to show a labeled text-->
+         <TextView
+             android:id="@+id/imagesLabelTv"
+             style="@style/TextAppearance.MaterialComponents.Body1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Pick upto 10 images" />
+
+         <!--TextInputLayout: input Brand of the Ad being created-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/brandTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/imagesLabelTv"
+             android:layout_marginTop="10dp"
+             android:hint="Brand"
+             app:startIconDrawable="@drawable/icon_brand_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp">
+
+             <EditText
+                 android:id="@+id/brandEt"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:inputType="textPersonName|textCapSentences"/>
+
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!--TextInputLayout: pick the Ad category from drop down options-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/categoryTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_below="@id/brandTil"
+             app:startIconDrawable="@drawable/icon_category_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp"
+             android:hint="Category"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <AutoCompleteTextView
+                 android:id="@+id/categoryAct"
+                 android:inputType="none"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+
+         <!--TextInputLayout: pick the Ad condition (New,Used, Refurbished) from dropdown options-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/conditionTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+             android:layout_below="@id/categoryTil"
+             app:startIconDrawable="@drawable/icon_condition_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp"
+             android:hint="Condition"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <AutoCompleteTextView
+                 android:id="@+id/conditionAct"
+                 android:inputType="none"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!--TextInputLayout: Location-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/locationTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             android:layout_below="@id/conditionTil"
+             app:startIconDrawable="@drawable/icon_location_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp"
+             android:hint="Location"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <EditText
+                 android:id="@+id/locationEt"
+                 android:inputType="textCapSentences"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!--TextInputLayout: Input price-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/priceTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             android:layout_below="@id/locationTil"
+             app:startIconDrawable="@drawable/icon_wallet_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp"
+             android:hint="Price"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <EditText
+                 android:id="@+id/priceEt"
+                 android:inputType="numberDecimal"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+
+         <!--TextInputLayout: Input Title-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/titleTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             android:layout_below="@id/priceTil"
+             app:startIconDrawable="@drawable/icon_title_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp"
+             android:hint="Title"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <EditText
+                 android:id="@+id/titleEt"
+                 android:inputType="textPersonName|textCapSentences"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!--TextInputLayout: Input Description-->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/descriptionTil"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+             android:layout_below="@id/titleTil"
+             app:startIconDrawable="@drawable/icon_description_white"
+             app:boxCornerRadiusBottomEnd="8dp"
+             app:boxCornerRadiusBottomStart="8dp"
+             app:boxCornerRadiusTopEnd="8dp"
+             app:boxCornerRadiusTopStart="8dp"
+             android:hint="Description"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <EditText
+                 android:id="@+id/descriptionEt"
+                 android:inputType="textMultiLine|textCapSentences"
+                 android:minHeight="100dp"
+                 android:gravity="top|start"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+
+     </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--MaterialButton: Submit/Post the Ad-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/postAdBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/m_button_height"
+        android:text="Post Ad"
+        app:cornerRadius="8dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

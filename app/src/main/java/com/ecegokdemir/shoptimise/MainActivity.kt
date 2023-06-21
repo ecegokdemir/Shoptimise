@@ -91,6 +91,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        //handle sellButton click, start AdCreateActivity to add create a new Ad
+        binding.sellButton.setOnClickListener {
+            startActivity(Intent(this,AdCreateActivity::class.java))
+        }
     }
 
     private fun showHomeFragment(){

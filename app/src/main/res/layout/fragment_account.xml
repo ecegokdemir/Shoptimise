@@ -207,9 +207,55 @@
                     android:drawableStart="@drawable/icon_person_gray"/>
 
 
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--MaterialCardView: Click to change password -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/changePasswordCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:drawableEnd="@drawable/icon_next_gray"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/icon_lock_gray"/>
 
 
             </com.google.android.material.card.MaterialCardView>
+
+            <!--MaterialCardView: Click to delete your account -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/deleteAccountCv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:contentPadding="10dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Account"
+                    android:drawableEnd="@drawable/icon_next_gray"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/icon_delete_gray"/>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
 
         </LinearLayout>
 
