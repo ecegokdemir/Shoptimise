@@ -4,6 +4,8 @@
 
 <h2 align="center"> "Shoptimise" is an online shopping application </h2> 
 
+[Presentation 🔗](https://drive.google.com/file/d/1wOPd7nQbFRyclUGxPfaWwZ0PUk4AgS-8/view?usp=sharing) <br>
+
 [Mockup in Figma (with Prototype) 🔗](https://www.figma.com/file/pFNcj0Ny3H5mCRsZIZtRv3/Shoptimise?type=design&node-id=0%3A1&t=5YUintZE3MNPmJTy-1) <br>
 
 Various plugins were used in the design. (e.g Material Design Icons,User Profile..) <br>
